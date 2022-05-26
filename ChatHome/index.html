@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>音乐</title>
+	<script src="js/v3.2.8/vue.global.prod.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/chat.css">
+</head>
+
+<body>
+	<div id="app">
+		<!-- 头部选择 -->
+		<div class="header">
+			<img src="./img/logo.png">
+			<ul class="select-style">
+				<li v-for="(item,index) in headerList" :class="[currentHeader===index?'selected':'']"
+					@click="select(index)">{{item}}</li>
+			</ul>
+		</div>
+		<!-- 展示图 -->
+		<div class="swiper">
+			<img src="./img/组 2@2x.png">
+		</div>
+		<!-- 通知公告 -->
+		<div class="notice">
+			<div class="flex-row">
+				<img src="./img/公告_看图王.png">
+				<p>通知公告：XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+			</div>
+			<div>2020-04-20</div>
+		</div>
+		<!-- 关于学会 -->
+		<div class="about flex-row">
+			<img src="./img/组 3@2x.png">
+			<div class="flex-column content">
+				<div class="title">关于学会</div>
+				<p class="font-color">About Us</p>
+				<p class="font-color text">
+					关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字
+				</p>
+				<div class="more-btn theme-color">
+					查看更多
+				</div>
+			</div>
+		</div>
+		<!-- 活动博览 -->
+		<div class="flex-column activity">
+			<div class="title">活动博览</div>
+			<p class="font-color">Active Expo</p>
+			<ul class="select-style select">
+				<li v-for="(item,index) in activityList" :class="[currentActivity===index?'selected':'']"
+					@click="selectActivity(index)">{{item}}</li>
+			</ul>
+			<!-- 内容 -->
+			<div class="flex-row container">
+				<!-- <img src="./img/矩形 6.png"> -->
+				<!-- <img src="./img/图层 18.png"> -->
+				<!-- <img src="./img/图层 18.png"> -->
+				<div class="item swiper padding-top-20"><img class="bg" src="./img/矩形 6@2x.png">
+					<img src="./img/图层 1.png" class="left-icon">
+					<img src="./img/图层 1.png" class="right-icon">
+				</div>
+				<div class="wrap">
+					<div class="item flex-column padding-top-20"><img src="./img/图层 18.png">
+						<div class="content">
+							名称名称名称
+						</div>
+					</div>
+					<div class="item flex-column padding-top-20"><img src="./img/图层 18.png">
+						<div class="content">
+							名称名称名称
+						</div>
+					</div>
+					<div class="item flex-column padding-top-20"><img src="./img/图层 18.png">
+						<div class="content">
+							名称名称名称
+						</div>
+					</div>
+					<div class="item flex-column padding-top-20"><img src="./img/图层 18.png">
+						<div class="content">
+							名称名称名称
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- 专家风采 -->
+		<div class="flex-column expert">
+			<img src="./img/组4.png" alt="">
+			<div class="container">
+				<div class="title font-white">专家风采</div>
+				<p class="font-color sub-title">Expert style</p>
+				<div class="flex-row first">
+					<div class="image">
+						<img src="./img/组 5.png">
+					</div>
+					<div class="flex-column content">
+						<h5 class="font-white">姓名姓名</h5>
+						<p class="font-color font-12 margin-top-20 text-overflow">
+							个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介
+						</p>
+						<div class="more-btn theme-color">
+							查看更多
+						</div>
+					</div>
+				</div>
+				<div class="flex-row second">
+					<div class="flex-column content">
+						<h5 class="font-white">姓名姓名</h5>
+						<p class="font-color font-12 margin-top-20 text-overflow">
+							个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介
+						</p>
+						<div class="more-btn theme-color opacity">
+							查看更多
+						</div>
+					</div>
+					<div class="image"><img src="./img/组 5.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<!-- 视频中心 -->
+		<div class="flex-column video-center">
+			<div class="title">视频中心</div>
+			<p class="font-color">Video Center</p>
+			<div class="container flex-row">
+				<div class="item" v-for="item in 3">
+					<div class="img-container">
+						<div class="bg"><img src="./img/矩形 10.png"></div>
+						<img src="./img/图层 2.png" class="icon">
+					</div>
+					<h4 class="video-title">标题标题标题标题标题</h4>
+					<p class="font-color text-overflow">
+						关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字关于我们的介绍文字
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer theme-color flex-column">
+			<div class="flex-row">
+				<div class="logo"><img src="./img/logo.png">
+				</div>
+				<div class="wrap">
+					<div class="flex-row concat-style">
+						<img src="./img/组6-1.png">
+						<div class="font-white">XXXXXXX</div>
+					</div>
+					<div class="flex-row concat-style">
+						<img src="./img/组6-2.png">
+						<div class="font-white">XXXXXXX</div>
+					</div>
+					<div class="flex-row concat-style">
+						<img src="./img/组6-3.png">
+						<div class="font-white">XXXXXXX</div>
+					</div>
+					<div class="flex-row concat-style">
+						<img src="./img/组6-4.png">
+						<div class="font-white">XXXXXXX</div>
+					</div>
+					<div class="flex-row concat-style">
+						<img src="./img/组6-5.png">
+						<div class="font-white">XXXXXXX</div>
+					</div>
+				</div>
+				<div class="qrcode flex-column">
+					<img src="./img/图层 11.png">
+					<p class="font-white">扫一扫添加微信</p>
+				</div>
+				<div class="qrcode flex-column">
+					<img src="./img/图层 11.png">
+					<p class="font-white">扫一扫添加QQ</p>
+				</div>
+			</div>
+			<div class="flex-row">版权信息:xxxxxx</div>
+		</div>
+		<section class="chat">
+			<!-- 弹幕盒子 -->
+			<div class="bullet-chat">
+				<!-- 弹幕 -->
+				<div class="dmGroup" v-for="(item,index) in dmData" :key="index"
+					v-bind:style="{top:item.top +'%',animationName:'dmAnimation',animationDuration:item.delayTime + 's',animationTimingFunction:'linear',animationDelay:item.timeRequired +'ms',animationPlayState:'running'}">
+					<div class="dmItem">
+						<div class="dm" :style="{border:item.borderColor? '1px solid #FF703E':'none'}">
+							<div class="avatarBox">
+								<img :src="item.avatar" class="avatar" />
+							</div>
+							<span class="messages" :style="{color:item.color}">{{ item.nickname }}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section />
+	</div>
+	<script>
+		const App = {
+			data () {
+				return {
+					currentHeader: 0,
+					headerList: ["首页", "关于学会", "通知公告", "活动博览", "专家风采", "乐器乐谱", "乐谱中心", "视频中心", "中国国际圆号艺术节",],
+					currentActivity: 0,
+					activityList: ["全部", "北京音乐节", "北京音乐节", "北京音乐节", "北京音乐节", "北京音乐节"],
+					//弹幕消息
+					dmData: [],
+					//弹幕消息栈
+					dmDataFu: [{
+						avatar: 'https://img01.yzcdn.cn/vant/cat.jpeg',
+						id: 17288,
+						nickname: '6666',
+					},
+					{
+						avatar: 'https://img01.yzcdn.cn/vant/cat.jpeg',
+						id: 17312,
+						nickname: '哈哈哈哈阿萨撒旦发生飞洒啊是',
+					},
+					{
+						avatar: 'https://img01.yzcdn.cn/vant/cat.jpeg',
+						id: 17312,
+						nickname: '哈哈哈哈阿萨撒旦发生飞洒啊是',
+					}, {
+						avatar: 'https://img01.yzcdn.cn/vant/cat.jpeg',
+						id: 17312,
+						nickname: '哈哈哈哈阿萨撒旦发生飞洒啊是',
+					}, {
+						avatar: 'https://img01.yzcdn.cn/vant/cat.jpeg',
+						id: 17312,
+						nickname: '哈哈哈哈阿萨撒旦发生飞洒啊是',
+					}, {
+						avatar: 'https://img01.yzcdn.cn/vant/cat.jpeg',
+						id: 17312,
+						nickname: '哈哈哈哈阿萨撒旦发生飞洒啊是',
+					}
+					],
+					//定时器
+					timer: null,
+					//定时器时间
+					timerS: 2500,
+					//计数器
+					num: -1,
+				}
+			},
+			mounted(){
+				this.isTime ();
+				this.parameters();
+			},
+			methods: {
+				select (index) {
+					this.currentHeader = index;
+				},
+				selectActivity (index) {
+					this.currentActivity = index;
+				},
+				//定时发送历史弹幕
+				isTime () {
+					this.timer = setInterval(() => {
+						this.num++;
+						if (this.num == this.dmDataFu.length - 1) {
+							this.dmDataFu = [...this.dmDataFu,...this.dmDataFu];
+							//清除定时器
+							// clearInterval(this.timer);
+						}
+						this.dmData.push(this.dmDataFu[this.num])
+					}, this.timerS)
+				},
+				//处理弹幕参数
+				parameters () {
+					const dmArr = [];
+					for (let i = 0; i < this.dmDataFu.length; i++) {
+						// 动画在开始前的延迟时间
+						const delayTime = Math.floor(Math.random() * 20) + 5;
+						// 动画执行一次的所需时间
+						const timeRequired = Math.floor(Math.random() * 300);
+						// const _time = time < 6 ? 6 + i : time + i;
+						// 随机位置
+						const top = Math.floor(Math.random() * 50) + 1;
+						const _p = {
+							id: this.dmDataFu[i].id,
+							nickname: this.dmDataFu[i].nickname,
+							avatar: this.dmDataFu[i].avatar,
+							top,
+							delayTime,
+							timeRequired,
+							//弹幕的字体颜色
+							color: '#fff',
+							//显示弹幕边框
+							borderColor: false
+						};
+						dmArr.push(_p);
+						console.log(timeRequired);
+					}
+					this.dmDataFu = dmArr
+				},
+			},
+		};
+		Vue.createApp(App).mount('#app');
+	</script>
+</body>
+
+</html>
