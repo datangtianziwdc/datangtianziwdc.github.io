@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'TC-Medium';
+    font-weight: 300;
+}
+html,body{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    display: block;
+}
+p::selection { color:#ffffff; background-color:#000000;}
+img::selection { color:#ffffff; background-color:#000000;}
+.over-hidden{
+    overflow: hidden;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.hover-black:hover {
+    transition-duration: 1s;
+    color: black;
+}
+
+.bg-color {
+    background-color: rgb(247, 246, 246);
+}
+
+.bg-color1 {
+    background-color: rgb(224, 224, 224);
+}
+
+.font-Regular {
+    font-family: 'HWSC-Regular';
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+.font-2em {
+    font-size: 2em;
+}
+
+.font-color-gray {
+    color: rgb(229, 222, 222);
+}
+.font-color-white {
+    color: white;
+}
+.font-weight-500{
+    font-weight: 500;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+
+.margin-L10 {
+    margin-left: 10px;
+}
+
+.margin-L20 {
+    margin-left: 20px;
+}
+
+.margin-R10 {
+    margin-right: 10px;
+}
+
+.margin-R20 {
+    margin-right: 20px;
+}
+
+.margin-T10 {
+    margin-top: 10px;
+}
+
+.margin-T20 {
+    margin-top: 20px;
+}
+
+.margin-T30 {
+    margin-top: 30px;
+}
+
+.margin-T40 {
+    margin-top: 40px;
+}
+
+.margin-T50 {
+    margin-top: 50px;
+}
+
+.margin-T100 {
+    margin-top: 100px;
+}
+
+.margin-B20 {
+    margin-bottom: 20px;
+}
+
+.margin-B30 {
+    margin-bottom: 30px;
+}
+
+.margin-B100 {
+    margin-bottom: 100px;
+}
+
+.padding-L20 {
+    padding-left: 20px;
+}
+
+.padding-R20 {
+    padding-right: 20px;
+}
+
+.padding-T20 {
+    padding-top: 20px;
+}
+
+.padding-T100 {
+    padding-top: 100px;
+}
+
+.padding-B100 {
+    padding-bottom: 100px;
+}
+.border-R10{
+    border-radius: 10px;
+}
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-auto {
+    flex: auto;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-v-center {
+    align-items: center;
+}
+
+.flex-v-start {
+    align-items: start;
+}
+.flex-h-end {
+    justify-content: flex-end;
+}
+.flex-h-center {
+    justify-content: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.space-h-10 {
+    width: 10px;
+}
+
+.space-h-20 {
+    width: 20px;
+}

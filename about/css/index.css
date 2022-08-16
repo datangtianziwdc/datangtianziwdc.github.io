@@ -1,0 +1,99 @@
+@import url(./main.css);
+@import url(./animate.css);
+@import url(./hover.css);
+.home{
+    position: relative;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px white;
+}
+.home .user-container{
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    background-image: url(../assets/images/avatar.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.home .user-container .user{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 6px 10px 30px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+    background-color: rgba(255,255,255,0.1);
+}
+.home .user-container .user img{
+    width: 100%;
+    height: auto;
+}
+.home .user-container .user .top-img{
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.home .user-container .user .weixin{
+    display: none;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%,100%);
+}
+.home .user-container .user .weixin img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.home .user-container .user .icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+.home .user-container .user .icon:hover{
+    box-shadow: 0 0 10px white;
+}
+.home .user-container .user .icon:hover .weixin{
+    display: block;
+}
+.home .user-container .user .battery{
+    position: absolute;
+    width: 34px;
+    height: 18px;
+    border: 1px solid white;
+    top: 10px;
+    right: 20px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.home .user-container .user .battery::before{
+    content: '100%';
+    width: 90%;
+    height: 90%;
+    background-color: rgb(14, 166, 14);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 5px;
+    font-size: xx-small;
+    line-height: 14px;
+}
+.home .user-container .user .battery::after{
+    content: '';
+    width: 4px;
+    height: 10px;
+    border: 1px solid white;
+    position: absolute;
+    top: 3px;
+    right: -6px;
+    box-sizing: border-box;
+}
