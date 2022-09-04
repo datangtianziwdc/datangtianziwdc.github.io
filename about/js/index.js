@@ -46,19 +46,20 @@ const tags = [
   '勤劳',
   '先知',
   '我不懂',
-  '轻率',
+  '搞怪',
   '文字',
   '平和',
-  '婆婆妈妈',
+  '倔强',
   '朴素',
   '身材苗条',
   '神人',
   '一风情万种',
   '少女梦',
   '财迷',
-  '魔鬼身材',
+  '非主流',
+  '铲屎官',
 ]
-const colors = ['#ccccff', '#33ccff', '#ffff80']
+const colors = ['#00ff00', '#ffff00', '#3385ff']
 
 class Dot {
   constructor(x, y, z, tag, color) {
@@ -96,7 +97,7 @@ class Dot {
     //   DOT_RADIUS * 2,
     //   DOT_RADIUS * 2
     // )
-    ctx.fillStyle = '#f0f0f5'
+    ctx.fillStyle = '#f2f2f2'
     ctx.font = `${20 * this.sizeProjection}px Arial`
     // var txt = 'Hello World'
     var txt = this.tag
