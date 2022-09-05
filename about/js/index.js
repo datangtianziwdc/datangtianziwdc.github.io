@@ -6,7 +6,7 @@ let clientXStart = 0
 let clientYStart = 0
 let clientXEnd = 0
 let clientYEnd = 0
-let speed = 0.0001
+let rotateSpeed = 0.0001
 // Get the canvas element from the DOM
 const canvas = document.querySelector('#scene')
 canvas.width = canvas.clientWidth
@@ -179,7 +179,7 @@ function render(a) {
   ctx.clearRect(0, 0, width, height)
   //   旋转速度
   // Increase the globe rotation
-  rotation = a * speed
+  rotation = a * rotateSpeed
 
   const sineRotation = Math.sin(rotation) // Sine of the rotation
   const cosineRotation = Math.cos(rotation) // Cosine of the rotation
@@ -262,9 +262,9 @@ console.log('对象', ctx)
 //       // ctx.getTransform()
 //     )
 //     if (moveX > 0) {
-//       speed = speed * 2
+//       rotateSpeed = rotateSpeed * 2
 //     } else {
-//       speed = speed / 2
+//       rotateSpeed = rotateSpeed / 2
 //     }
 //   },
 //   false
