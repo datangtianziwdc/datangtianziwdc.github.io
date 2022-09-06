@@ -38,6 +38,7 @@
 
 .card[data-state="#about"] {
   /* height: 450px; */
+  min-width: 300px;
 }
 .card[data-state="#about"] .card-main {
   padding-top: 0;
@@ -50,6 +51,7 @@
 
 .card[data-state="#experience"] {
   height: 550px;
+  min-width: 300px;
 }
 
 .card.is-active .card-header {
