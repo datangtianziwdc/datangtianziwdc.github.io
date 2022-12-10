@@ -1,4 +1,12 @@
 console.clear()
+var sX,
+  sY,
+  nX,
+  nY,
+  desX = 0,
+  desY = 0,
+  tX = 0,
+  tY = 10
 let moveX = 0
 let moveY = 0
 let moveFlg = false
@@ -175,6 +183,7 @@ function createDots() {
 /* ======== RENDER ====== */
 /* ====================== */
 function render(a) {
+  console.log("render",a)
   // Clear the scene
   ctx.clearRect(0, 0, width, height)
   //   旋转速度
@@ -269,3 +278,56 @@ console.log('对象', ctx)
 //   },
 //   false
 // )
+function applyTranform(obj) {
+  // Constrain the angle of camera (between 0 and 180)
+  if (tY > 180) tY = 180
+  if (tY < 0) tY = 0
+
+  // Apply the angle
+  obj.style.transform = 'rotateX(' + -tY + 'deg) rotateY(' + tX + 'deg)'
+}
+// function playSpin(yes) {
+//   ospin.style.animationPlayState = yes ? 'running' : 'paused'
+// }
+
+// setup events
+// document.onpointerdown = function (e) {
+//   console.log('onpointerdown', e)
+//   clearInterval(canvas.timer)
+//   e = e || window.event
+//   var sX = e.clientX,
+//     sY = e.clientY
+
+//   this.onpointermove = function (e) {
+//     console.log('onpointermove', e)
+//     e = e || window.event
+//     var nX = e.clientX,
+//       nY = e.clientY
+//     desX = nX - sX
+//     desY = nY - sY
+//     tX += desX * 0.1
+//     tY += desY * 0.1
+//     applyTranform(canvas)
+//     sX = nX
+//     sY = nY
+//   }
+
+//   this.onpointerup = function (e) {
+//     console.log('onpointerup', e)
+//     canvas.timer = setInterval(function () {
+//       desX *= 0.95
+//       desY *= 0.95
+//       tX += desX * 0.1
+//       tY += desY * 0.1
+//       applyTranform(canvas)
+//       // playSpin(false)
+//       if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+//         clearInterval(canvas.timer)
+//         // playSpin(true)
+//       }
+//     }, 17)
+//     this.onpointermove = this.onpointerup = null
+//   }
+
+//   return false
+// }
